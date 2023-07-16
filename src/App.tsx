@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Cards from "./components/Cards/Cards.styled";
+import CardsItem from "./components/CardsItem/CardsItem.styled";
+import Image from "./components/Image/Image.styled";
+import Title from "./components/Title/Title.styled";
+import Text from "./components/Text/Text.styled";
+import BtnPrimary from "./components/BtnPrimary/BtnPrimary.styled";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Cards>
+                <CardsItem>
+                    <Image>
+                        <img src="/images/card-image.jpg" alt=""/>
+                    </Image>
+                    <Title>Headline</Title>
+                    <Text>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Text>
+                    <BtnPrimary as={"a"} href={"#"}>See more</BtnPrimary>
+                    <BtnPrimary bordered>Save</BtnPrimary>
+                </CardsItem>
+            </Cards>
+        </div>
+    );
 }
 
 export default App;
